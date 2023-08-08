@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --index: calc(1vw + 1vh);
+}
+
+body {
+    background-image: linear-gradient(to bottom, rgb(142, 221, 252), rgb(248, 248, 248), rgb(73, 41, 1, 0));
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto Mono', monospace;
+    overflow: visible;
+}
+.header {
+    display:none;
+}
+.clouds {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.clouds img {
+    margin: 1vh;
+}
+nav {
+    height: 190vh;
+    width: 120px;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    padding-top: 10vh;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style:none;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.social-logo {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 5px;
+    margin-left: 40px;
+    margin-top: 300px;
+}
+.hero-portfolio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: -1;
+}
+.aboutme {
+    position: absolute;
+    left: 13%;
+    bottom: 30%;
+    width: 300px;
+}
+.aboutme-text {
+    text-align:center;
+}
+.aboutme-text p {
+    text-align: start;
+}
+.bg-wrap {
+    overflow: visible;
+    padding-top: 20vh;
+    z-index: 100;
+}
+.projects-container {
+    position: absolute;
+    top: 110%;
+    right: 45%;
+    
+}
+.project1 {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.contact-me {
+    position: absolute;
+    right: 45%;
+    top: 230vh;
+}
+.contact {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    flex-direction: column;
+    padding: 30px;
+}
+
+@media (max-width: 930px) {
+    .hero-portfolio {
+        flex-direction: column;
+        margin-top: 150px;
+    }
+    .aboutme {
+        left: 35%;
+        top: 110%;
+        font-size: 2rem;
+    }
+    .aboutme-text p {
+        text-align: center;
+    }
+    .projects-container {
+        top: 240%;
+        right: 37%;
+    }
+    .contact-me {
+        right: 38%;
+        top: 380vh;
+        margin-bottom: 40vh;
+        text-align: center;
+    }
+    .contact p {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 869px) {
+    .reducecloud {
+        display: none;
+    }
+    .clouds {
+        justify-content: center;
+    }
+    .image-container img {
+        margin-top: 70px;
+    }
+    .aboutme {
+        top: 140%;
+    }
+    .projects-container {
+        top: 300%;
+    }
+    .contact-me {
+        top: 480vh;
+        right: 36%;
+    }
+}
+
+@media (max-width: 715px) {
+    nav {
+        display: none;
+    }
+    .header {
+        display: flex;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        justify-content: space-between;
+        padding: 15px;
+        position: fixed;
+        width: 100%;
+    }
+    .header ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        gap: 2vw;
+        font-size: 1.5rem;
+        margin-left: 20px;
+    }
+    .social-logo1 {'
+        display: flex;
+    }
+    .social-logo1 img {
+        width: 5vw;
+    }
+    .aboutme {
+        left: 28%;
+    }
+}
+
+@media (max-width: 535px) {
+    .header ul {
+        font-size: 1rem;
+    }
+    .aboutme {
+        left: 25%;
+    }
+    .projects-container {
+        right: 32%;
+    }
+    .contact-me {
+        right: 29%;
+    }
+}
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .hero-portfolio {
+        text-align: center;
+    }
+    .aboutme {
+        left: 18%;
+    }
+    .projects-container {
+        right: 26%;
+    }
+    .contact-me {
+        right: 24%;
+    }
+}
